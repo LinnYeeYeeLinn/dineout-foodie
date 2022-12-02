@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;scroll-padding-top: 4rem;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DineOut Restaurant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="relative">
+    <!-- Nav -->
+    <header class="z-10 flex items-center justify-between w-full fixed top-0 left-0 px-5 md:px-16 py-3 text-white navFixed" id="home">
+        <a href="#" class="text-2xl logo"><i class="fa-solid fa-fork-knife"></i>DineOut</a>
+        <i class="fa-solid fa-bars-staggered text-2xl cursor-pointer openMenu"></i>
+    </header>
+    <main style="background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url(./img/home-bg.jpg) center/cover;height:100vh;" class="flex items-center justify-center flex-col text-white text-center">
+        <h1 class="text-4xl md:text-5xl font-bold">Dine Out Restaurant</h1>
+        <p class="my-4 md:w-4/5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem magni minima porro quidem assumenda. Nisi ea provident quos iusto pariatur, quaerat itaque ratione ducimus dolorem voluptatibus ipsam neque. Architecto, vel!</p>
+        <button class="cursor-pointer rounded-2xl px-4 py-2 border border-2 border-yellow-500">Our Menu</button>
+    </main>
+
+    <!-- nav menu -->
+    <div class="fixed z-20 top-0 left-0 w-full py-24 h-screen bg-black text-white navMenu" style="clip-path: circle(100% at 50% 50%);">
+        <div class="absolute top-7 right-8 md:right-16 cursor-pointer closeMenu"><i class="text-2xl fa-solid fa-xmark"></i></div>
+        <div class="grid place-items-center">
+            <a class="text-lg my-3 hover:text-yellow-500" href="#home">Home</a>
+            <a class="text-lg my-3 hover:text-yellow-500" href="#about">About</a>
+            <a class="text-lg my-3 hover:text-yellow-500" href="#menu">Menu</a>
+            <a class="text-lg my-3 hover:text-yellow-500" href="#testimonials">Testimonials</a>
+            <a class="text-lg my-3 hover:text-yellow-500" href="#team">Team</a>
+        </div>
+    </div>
+
+    <!-- about section -->
+    <section class="my-5 md:my-10 px-5 md:px-16" id="about">
+        <div class="text-center mb-8">
+            <h2 class="">Our Story</h2>
+            <h2 class="font-bold text-xl md:text-3xl">About Us</h2>
+        </div>
+        <div class="grid lg:grid-rows-1 lg:grid-cols-2 grid-rows-1 grid-cols-1 gap-5">
+            <div class="">
+                <h1 class="text-xl md:text-3xl font-semibold mb-2 md:mb-5">Welcome To Dine Restaurant</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, sed. Recusandae, aliquam? Iste deleniti perferendis eveniet Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, repudiandae. libero quas. Voluptates ,Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, quasi ipsa voluptatum perspiciatis nam sapiente magnam. Vitae qui commodi fugit! deleniti culpa iusto quasi?</p>
+                <p>Lorem ipsum dolor Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, porro. beatae ex temporibus iure. Rem, numquam accusantium inventore omnis, quam, alias aspernatur illum ipsum impedit voluptas sint!</p>
+                <button class="cursor-pointer mt-5 rounded-2xl px-4 py-2 border border-2 border-yellow-500">Check Our Menu</button>
+            </div>
+            <div class="lg:grid lg:place-items-center">
+                <img src="./img/about-img.jpg" class="rounded-xl w-full lg:w-3/4" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- menu section -->
+    <section class="my-5 md:my-10 px-5 md:px-16" id="menu">
+        <div class="text-center">
+            <h2 class="">Order New</h2>
+            <h2 class="font-bold text-xl md:text-3xl">Our Menu</h2>
+        </div>
+        <div class="grid place-items-center mt-5 mb-8">
+            <ul class="flex activeLi">
+                <li class="mx-4 font-semibold tabActive" onclick="openTab(event, 'lunch')"><a href="#">Lunch</a></li>
+                <li class="mx-4 font-semibold" onclick="openTab(event, 'dinner')"><a href="#">Dinner</a></li>
+                <li class="mx-4 font-semibold" onclick="openTab(event, 'drinks')"><a href="#">Drinks</a></li>
+                <li class="mx-4 font-semibold" onclick="openTab(event, 'desserts')"><a href="#">Desserts</a></li>
+            </ul>
+        </div>
+        <div id="lunch" class="tabContent">
+            <div class="grid md:grid-rows-1 md:grid-cols-2 grid-cols-1 grid-rows-2 gap-5">
+                <div class="">
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/1.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Lunch Item</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/2.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Lunch Item</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/3.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Lunch Item</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/4.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Lunch Item</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/5.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Lunch Item</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/6.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Lunch Item</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/7.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Lunch Item</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/8.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Lunch Item</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dinner" class="hidden tabContent">
+            <div class="grid md:grid-rows-1 md:grid-cols-2 grid-cols-1 grid-rows-2 gap-5">
+                <div class="">
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/1.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Dinner Item</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/2.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Dinner Item</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/3.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Dinner Item</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/4.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Dinner Item</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/5.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Dinner Item</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/6.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Dinner Item</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/7.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Dinner Item</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/8.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Dinner Item</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="drinks" class="hidden tabContent">
+            <div class="grid md:grid-rows-1 md:grid-cols-2 grid-cols-1 grid-rows-2 gap-5">
+                <div class="">
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/1.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Drinks</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/2.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Drinks</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/3.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Drinks</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/4.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Drinks</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/5.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Drinks</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/6.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Drinks</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/7.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Drinks</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/8.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Drinks</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="desserts" class="hidden tabContent">
+            <div id="desserts" class="grid md:grid-rows-1 md:grid-cols-2 grid-cols-1 grid-rows-2 gap-5">
+                <div class="">
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/1.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Desserts</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/2.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Desserts</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/3.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Desserts</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/4.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Desserts</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/5.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Desserts</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/6.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Desserts</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/7.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Desserts</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                    <hr>
+                    <div class="flex flex-row items-center justify-between my-3">
+                        <div class="flex items-center">
+                            <img src="./img/8.jpg" class="w-16 h-16" alt="">
+                            <h3 class="text-xl font-semibold ml-3">Desserts</h3>
+                        </div>
+                        <h3 class="font-semibold">$40.00</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- testimonials section -->
+    <section class="px-5 md:px-16 my-5 md:my-10" id="testimonials">
+        <div class="text-center">
+            <h2 class="">Testimonials</h2>
+            <h2 class="font-bold text-xl md:text-3xl">Some Feedback</h2>
+        </div>
+        <div class="my-8 grid gap-5 lg:grid-cols-3 lg-grid-cols-1 grid-cols-1">
+            <div class="border border-1 border-slate-300 p-5 rounded-xl">
+                <div class="flex justify-between items-center mb-3">
+                    <div>
+                        <h3 class="font-bold">Roj Himachal</h3>
+                        <h4>Food Specialist</h4>
+                    </div>
+                    <div>
+                        <img src="./img/p1.jpg" class="w-14 h-14 rounded-full" alt="">
+                    </div>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adcing elit. Ab atque quam corrupti recusandae quasi error voluptate modi, dolore minima optio. Sint voluptates, alias commodi labore unde vero inventore! Laudantium, repellendus?</p>
+                    <div class="mt-2">
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                    </div>
+            </div>
+            <div class="border border-1 border-slate-300 p-5 rounded-xl">
+                <div class="flex justify-between items-center mb-3">
+                    <div>
+                        <h3 class="font-bold">Roj Himachal</h3>
+                        <h4>Food Specialist</h4>
+                    </div>
+                    <div>
+                        <img src="./img/p2.jpg" class="w-14 h-14 rounded-full" alt="">
+                    </div>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adcing elit. Ab atque quam corrupti recusandae quasi error voluptate modi, dolore minima optio. Sint voluptates, alias commodi labore unde vero inventore! Laudantium, repellendus?</p>
+                    <div class="mt-2">
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                    </div>
+            </div>
+            <div class="border border-1 border-slate-300 p-5 rounded-xl">
+                <div class="flex justify-between items-center mb-3">
+                    <div>
+                        <h3 class="font-bold">Roj Himachal</h3>
+                        <h4>Food Specialist</h4>
+                    </div>
+                    <div>
+                        <img src="./img/p3.jpg" class="w-14 h-14 rounded-full" alt="">
+                    </div>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adcing elit. Ab atque quam corrupti recusandae quasi error voluptate modi, dolore minima optio. Sint voluptates, alias commodi labore unde vero inventore! Laudantium, repellendus?</p>
+                    <div class="mt-2">
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                        <i class="fa-solid fa-star text-yellow-500"></i>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- team section -->
+    <section class="px-5 md:px-16 my-5 md:my-10 z-0" id="team">
+        <div class="text-center">
+            <h2 class="">Team</h2>
+            <h2 class="font-bold text-xl md:text-3xl">Our Chefs</h2>
+        </div>
+        <div class="grid md:grid-cols-3 md:grid-rows-1 grid-cols-1 my-8 gap-5">
+            <div class="relative flex items-center justify-center">
+                <img src="./img/chef-1.jpg" class="w-full" alt="">
+                <div class="absolute bg-red-900 flex flex-column items-center justify-center bottom-5 py-2 text-center lg:px-16 px-10 text-white rounded-xl">
+                    <div>
+                        <h3>Roji Himachal</h3>
+                        <h4>Head Chef</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="relative flex items-center justify-center">
+                <img src="./img/chef-2.jpg" class="w-full" alt="">
+                <div class="absolute bg-slate-900 flex flex-column items-center justify-center bottom-5 py-2 text-center lg:px-16 px-10 text-white rounded-xl">
+                    <div>
+                        <h3>Roji Himachal</h3>
+                        <h4>Head Chef</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="relative flex items-center justify-center">
+                <img src="./img/chef-3.jpg" class="w-full" alt="">
+                <div class="absolute bg-blue-900 flex flex-column items-center justify-center bottom-5 py-2 text-center lg:px-16 px-10 text-white rounded-xl">
+                    <div>
+                        <h3>Roji Himachal</h3>
+                        <h4>Head Chef</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section -->
+    <footer class="px-5 md:px-16 text-center mt-5 text-white py-10 md:mt-10" style="background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url(./img/footer-bg.jpg);">
+        <div class="grid md:grid-cols-3 md:grid-rows-1 grid-cols-1 gap-4" >
+            <div class="">
+                <h3 class="font-bold mb-3 text-xl">Our Location</h3>
+                <p>xyz Street, Sector-12,</p>
+                <p>New Dehli-000 3453 3626</p>
+            </div>
+            <div class="text-center">
+                <h3 class="font-bold mb-3 text-xl">Opening Hours</h3>
+                <p>Monday to Sunday</p>
+                <p>9:00 AM - 10:00 PM</p>
+            </div>
+            <div class="text-center">
+                <h3 class="font-bold mb-3 text-xl">Contact Us</h3>
+                <p>923 4523 3543</p>
+                <p>info@gmail.com</p>
+                <div class="mt-2">
+                    <i class="cursor-pointer text-xl hover:text-yellow-500 mx-1 fa-brands fa-facebook-f"></i>
+                    <i class="cursor-pointer text-xl hover:text-yellow-500 mx-1 fa-brands fa-instagram"></i>
+                    <i class="cursor-pointer text-xl hover:text-yellow-500 mx-1 fa-brands fa-twitter"></i>
+                    <i class="cursor-pointer text-xl hover:text-yellow-500 mx-1 fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <hr class="my-8 w-full bg-slate-200">
+        <div class="text-lg">&copy; 2022-Designed by The DineOut</div>
+    </footer>
+
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../../jquery-3.6.0.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
